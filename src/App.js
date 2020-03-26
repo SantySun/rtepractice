@@ -48,16 +48,16 @@ class EditorConvertToHTML extends Component {
       <div className="border container">
         <Editor
           editorState={editorState}
-          wrapperClassName="demo-wrapper"
-          editorClassName="demo-editor border"
+          wrapperClassName="border"
+          editorClassName="border"
           onEditorStateChange={(editorState) => this.onEditorStateChange(editorState)}
           toolbar={{
-            inline: { inDropdown: false },
+            inline: { inDropdown: true },
             list: { inDropdown: false },
             textAlign: { inDropdown: false },
-            link: { inDropdown: false },
+            link: { inDropdown: true },
             history: { inDropdown: true },
-            image: { uploadCallback: this.uploadImageCallBack, alt: { present: true, mandatory: false } },
+            image: { uploadCallback: this.uploadImageCallBack, previewImage: true, alt: { present: false, mandatory: false } },
           }}
         />
         <p style={{ width: "auto" }}
